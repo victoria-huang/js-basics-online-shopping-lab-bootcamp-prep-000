@@ -22,16 +22,16 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   } else if (cart.length === 1) {
     var obj = cart[0];
-      
+
     for (var key in obj) {
       var item = key;
       var price = obj[key];
     }
-    
+
     console.log(`In your cart, you have ${item} at $${price}.`)
   } else if (cart.length === 2) {
     var statement = "In your cart, you have ";
-    
+
     for (var i = 0; i < cart.length; i++) {
       var obj = cart[i];
 
@@ -50,7 +50,7 @@ function viewCart() {
     console.log(statement);
   } else {
     var statement = "In your cart, you have ";
-    
+
     for (var i = 0; i < cart.length; i++) {
       var obj = cart[i];
 
@@ -74,7 +74,7 @@ function viewCart() {
 
 function total() {
   var sum = 0;
-  
+
   for (var i = 0; i < cart.length; i++) {
     var obj = cart[i];
 
@@ -82,7 +82,7 @@ function total() {
       sum += obj[key];
     }
   }
-  
+
   return sum;
 }
 
